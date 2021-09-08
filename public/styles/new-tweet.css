@@ -4,7 +4,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
 }
 
 .counter {
@@ -22,7 +21,7 @@
   font-size: 16px;
 }
 
-.special_counter {
+.special-counter {
   font-family: 'Bungee', sans-serif;
   font-size: 16px;
 }
@@ -35,6 +34,77 @@ textarea {
   border-bottom: 4px solid black;
   margin-bottom: 5px;
   padding-top: 20px;
-  width: 404px;
-  height: 56px;
+  width: 800px;
+  height: 100px;
+}
+
+.tweet-container {
+  background-color: transparent;
+  display: block;
+  resize: none;
+  outline: none;
+  border: 4px solid black;
+  margin: 20px auto;
+  padding-top: 5px;
+  padding-left: 20px;
+  width: 800px;
+  height: 200px;
+  transition: box-shadow .2s;
+}
+
+.tweet-container:hover {
+  box-shadow: 8px 8px cadetblue;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+
+.user-image {
+  display: flex;
+  align-items: center;
+}
+
+.tweet-container-text {
+  background-color: transparent;
+  resize: none;
+  outline: none;
+  border: none; 
+  border-bottom: 4px solid black;
+  margin-bottom: 5px;
+  padding-top: 20px;
+  width: 750px;
+  height: 50px;
+}
+
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  padding-right: 30px;
+  padding-left: 10px;
+  color:  #4056A1;
+}
+
+.footer>.time {
+  color:black;
+}
+
+.fa-flag:hover {
+  color:darkgoldenrod;
+}
+
+.fa-retweet:hover {
+  color:darkgoldenrod;
+}
+
+.fa-heart:hover {
+  color:darkgoldenrod;
+}
+
+.warning-text  {
+  color: red;
 }
