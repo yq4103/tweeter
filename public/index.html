@@ -27,10 +27,6 @@
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.4.3/jquery.timeago.min.js"></script>
 
-    <script src="dist/timeago.js" type="text/javascript"></script>
-
-
-
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
 
@@ -60,7 +56,9 @@
     <!-- Page-specific (main) content here -->
     <main>
       <section class="new-tweet">
-        <form method="POST" action="/tweets">
+        <div class="errorOne">Exceeded text limit.</div>
+        <div class="errorTwo">Type something.</div>
+        <form method="POST" action="/tweets" class="form">
           <label for="tweet-text"></label>
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="counter">
@@ -69,7 +67,6 @@
           </div>
         </form>
         
-
         <div class="tweets">
 
         </div>

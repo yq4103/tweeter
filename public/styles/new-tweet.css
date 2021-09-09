@@ -108,3 +108,19 @@ textarea {
 .warning-text  {
   color: red;
 }
+
+.errorOne {
+  border: 3px solid red;
+  color: red;
+  padding: 4px;
+  margin-top: 1em;
+  display: none;
+}
+
+.errorTwo {
+  border: 3px solid red;
+  color: red;
+  padding: 4px;
+  margin-top: 1em;
+  display: none;
+}
