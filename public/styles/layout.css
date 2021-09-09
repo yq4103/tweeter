@@ -35,3 +35,13 @@ main {
   justify-content: center;
   flex-direction: column;
 }
+
+
+@media only screen and (min-width: 1024px) {
+  .header-and-main {
+    display: flex;
+    padding-top: 280px;
+    padding-left: 30px;
+  }
+
+}

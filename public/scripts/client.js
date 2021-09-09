@@ -70,11 +70,11 @@ $(document).ready(function() {
     event.preventDefault();
 
     if ($(".special-counter").text() < 0) {
-      return $(".errorOne").show();
+      return $(".errorOne").slideDown().show();
     }
     
     if ($(".special-counter").text() == 140) {
-      return $(".errorTwo").show();
+      return $(".errorTwo").slideDown().show();
     }
 
     $.ajax('/tweets', { method: 'POST', data: $(".form").serialize() }).done(() => { loadTweets(); $(".errorOne").hide(); $(".errorTwo").hide(); });
