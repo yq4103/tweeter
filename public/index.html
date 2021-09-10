@@ -42,7 +42,7 @@
     <nav class="nav">
       <span>tweeter</span>
       <span class="write"><b>Write</b> a New Tweet <br>
-        <center><i class="fas fa-angle-double-down"></i></center>
+        <center><a href="#tweet-text"><i class="fas fa-angle-double-down"></i></a></center>
       </span> 
     </nav>
 
@@ -60,8 +60,13 @@
     <!-- Page-specific (main) content here -->
     <main>
       <section class="new-tweet">
-        <div class="errorOne"><i class="fas fa-radiation"></i></i>Exceeded text limit.<i class="fas fa-radiation"></i></div>
-        <div class="errorTwo"><i class="fas fa-radiation"></i>Type something.<i class="fas fa-radiation"></i></div>
+        <div class="errorOne">
+          <i class="fas fa-radiation"></i>Characters limit exceeded.<i class="fas fa-radiation"></i>
+        </div>
+        <div class="errorTwo">
+          <i class="fas fa-radiation"></i>Start typing.
+          <i class="fas fa-radiation"></i>
+        </div>
         <form method="POST" action="/tweets" class="form">
           <label for="tweet-text"></label>
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
@@ -70,12 +75,9 @@
             <output name="counter" class="special-counter" for="tweet-text">140</output>
           </div>
         </form>
-        
         <div class="tweets">
-
         </div>
       </section>
-
     </main>
     </div>
   </body>

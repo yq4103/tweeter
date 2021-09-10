@@ -36,6 +36,7 @@ textarea {
   padding-top: 20px;
   width: 800px;
   height: 100px;
+  font-weight: bold;
 }
 
 .tweet-container {
@@ -79,7 +80,6 @@ textarea {
   height: 50px;
 }
 
-
 .footer {
   display: flex;
   justify-content: space-between;
@@ -89,7 +89,7 @@ textarea {
   color:  #4056A1;
 }
 
-.footer>.time {
+.footer .timeago {
   color:black;
 }
 
