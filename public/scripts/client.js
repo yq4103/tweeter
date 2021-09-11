@@ -71,7 +71,7 @@ $(document).ready(function() {
         $(".errorTwo").slideDown().show();
         $(".errorOne").hide();
         return false;
-      } else if (string.length >= 140) {
+      } else if (string.length > 140) {
         $(".errorOne").slideDown().show();
         $(".errorTwo").hide();
         return false;
