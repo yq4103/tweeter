@@ -74,7 +74,8 @@ textarea {
   background-color: transparent;
   resize: none;
   outline: none;
-  border: none; 
+  border: none;
+  overflow-wrap: break-word;
   border-bottom: 4px solid black;
   margin-bottom: 5px;
   padding-top: 20px;
