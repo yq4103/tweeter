@@ -83,10 +83,11 @@ $(document).ready(function() {
     //only allowing a post if it is a valid post
     if (errorValidation($(".special-counter").text()) === true) {
       $.ajax('/tweets', { method: 'POST', data: $(".form").serialize() }).done(() => { loadTweets(); });
+      $("#tweet-text").val("");
     }
     
     //this clears the text box as the tweet is submitted
-    $("#tweet-text").val("");
+
     //this returns the counter to 140 after the text box is cleared
     $(".special-counter").text(140);
     //removes the red color of the 140 after the text box is cleared
