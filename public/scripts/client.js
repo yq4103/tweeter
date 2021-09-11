@@ -67,13 +67,13 @@ $(document).ready(function() {
     //this function checks if the user tries to enter a blank form or go over the 140 limit, displays the error messages and then hides the error messages
     const errorValidation = (string) => {
 
-      if (string < 0) {
-        $(".errorOne").slideDown().show();
-        $(".errorTwo").hide();
-        return false;
-      } else if (string == 140) {
+      if (string.length === 0) {
         $(".errorTwo").slideDown().show();
         $(".errorOne").hide();
+        return false;
+      } else if (string.length >= 140) {
+        $(".errorOne").slideDown().show();
+        $(".errorTwo").hide();
         return false;
       } else {
         $(".errorOne").hide(); $(".errorTwo").hide(); return true;
@@ -81,17 +81,15 @@ $(document).ready(function() {
     };
 
     //only allowing a post if it is a valid post
-    if (errorValidation($(".special-counter").text()) === true) {
+    if (errorValidation($("#tweet-text").val()) === true) {
       $.ajax('/tweets', { method: 'POST', data: $(".form").serialize() }).done(() => { loadTweets(); });
+      //this clears the text box as the tweet is submitted
       $("#tweet-text").val("");
+      //this returns the counter to 140 when the tweet button is hit
+      $(".special-counter").text(140);
+      //removes the red color of the 140 after the text box is cleared
+      $(".special-counter").removeClass('warning-text');
     }
-    
-    //this clears the text box as the tweet is submitted
-
-    //this returns the counter to 140 after the text box is cleared
-    $(".special-counter").text(140);
-    //removes the red color of the 140 after the text box is cleared
-    $(".special-counter").removeClass('warning-text');
 
   });
 
