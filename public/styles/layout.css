@@ -41,6 +41,7 @@ main {
   .header-and-main {
     display: flex;
     justify-content: flex-end;
+    flex-direction: row;
     padding-top: 280px;
     padding-left: 20px;
     padding-right: 20px;
